@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2557786904
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f1004508d289837df9d2cf66a23809d7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 63cc72860e0b5a073863146926d936a8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Bundles/CubeTexture_2.prefab
+- Assets/Bundles/bds.png
+- Assets/Bundles/CubeTexture_3.prefab
+- Assets/Bundles/zfnp.jpg
+- Assets/Bundles/CubeTexture_1.prefab
+- Assets/Bundles/ylzy.jpg
+Dependencies: []

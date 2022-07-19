@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3694473556
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: testab.bundle
+      Dependencies: {}
