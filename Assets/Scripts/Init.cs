@@ -22,7 +22,7 @@ public class Init : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("GC 使用大小: " + (DllHelper.il2cpp_gc_get_used_size()/1024) + " kb" + "\t" + "heap 大小: " + (DllHelper.il2cpp_gc_get_heap_size()/1024) + " kb");
+        Debug.Log("GC 使用大小: " + (DllHelper.il2cpp_gc_get_used_size()/1024) + " kb" + "\t" + "heap 大小: " + (DllHelper.il2cpp_gc_get_heap_size()/1024) + " kb");
     }
 
     private AssetBundle _assetBundle;
@@ -71,6 +71,7 @@ public class Init : MonoBehaviour
         _assetBundle.Unload(true);
         //Resources.UnloadUnusedAssets();
         _objects = null;
+        GC.Collect();
     }
     
 }
