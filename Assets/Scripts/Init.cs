@@ -22,7 +22,7 @@ public class Init : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("GC 使用大小: " + (DllHelper.il2cpp_gc_get_used_size()/1024) + " kb" + "\t" + "heap 大小: " + (DllHelper.il2cpp_gc_get_heap_size()/1024) + " kb");
+        //Debug.Log("GC 使用大小: " + (DllHelper.il2cpp_gc_get_used_size()/1024) + " kb" + "\t" + "heap 大小: " + (DllHelper.il2cpp_gc_get_heap_size()/1024) + " kb");
     }
 
     private AssetBundle _assetBundle;
@@ -31,7 +31,7 @@ public class Init : MonoBehaviour
     void Reg()
     {
         _loadAb.onClick.AddListener(LoadAb);
-        _loadTexture.onClick.AddListener(LoadTexture);
+        _loadTexture.onClick.AddListener(LoadAllGameObject);
         _instance.onClick.AddListener(Instance);
         _destroy.onClick.AddListener(Destroy);
         _unloadAb.onClick.AddListener(UnLoadAb);
@@ -45,7 +45,7 @@ public class Init : MonoBehaviour
         GC.Collect();
     }
     
-    private void LoadTexture()
+    private void LoadAllGameObject()
     {
         _objects = _assetBundle.LoadAllAssets<GameObject>();
     }
@@ -62,10 +62,10 @@ public class Init : MonoBehaviour
         GameObject.Destroy(_gameObjects[0]);
         GameObject.Destroy(_gameObjects[1]);
         GameObject.Destroy(_gameObjects[2]);
-        _gameObjects = null;
+        _gameObjects = new GameObject[3];
         _objects = null;
     }
-
+    
     private void UnLoadAb()
     {
         _assetBundle.Unload(true);
